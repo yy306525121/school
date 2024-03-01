@@ -2,6 +2,7 @@ package cn.codeyang.school.common.core;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.optaplanner.core.api.domain.lookup.PlanningId;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 public class BaseEntity {
 
+    @PlanningId
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
