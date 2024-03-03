@@ -9,10 +9,15 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class LessonTypeServiceImpl implements LessonTypeService {
-    private final LessonTypeRepository lessonFeeSettingRepository;
+    private final LessonTypeRepository lessonTypeRepository;
 
     @Override
     public void save(LessonType lessonFeeSetting) {
-        lessonFeeSettingRepository.save(lessonFeeSetting);
+        lessonTypeRepository.save(lessonFeeSetting);
+    }
+
+    @Override
+    public LessonType findByType(Integer type) {
+        return lessonTypeRepository.findByType(type);
     }
 }

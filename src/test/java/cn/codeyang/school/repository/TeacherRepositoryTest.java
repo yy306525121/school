@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,5 +43,14 @@ class TeacherRepositoryTest {
 
         teacherRepository.save(teacher);
         teacherRepository.flush();
+    }
+
+    @Test
+    @Transactional
+    public void testSelect() {
+        Teacher teacher = teacherRepository.findByName("李四");
+        List<Subject> subjectList = teacher.getSubjectList();
+        System.out.println(subjectList);
+        System.out.println(teacher);
     }
 }

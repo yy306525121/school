@@ -1,6 +1,8 @@
 package cn.codeyang.school.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningScore;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
@@ -14,7 +16,8 @@ import java.util.List;
 /**
  * @author yangzy
  */
-@Data
+@Getter
+@Setter
 @PlanningSolution
 public class LessonPlanSolution {
     @ValueRangeProvider

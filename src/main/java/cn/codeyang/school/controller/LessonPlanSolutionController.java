@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author yangzy
  */
 @RestController
-@RequestMapping("/lessonPlanSolution")
+@RequestMapping("/solution")
 @RequiredArgsConstructor
 public class LessonPlanSolutionController {
     private final SolverManager<LessonPlanSolution, Long> solverManager;
