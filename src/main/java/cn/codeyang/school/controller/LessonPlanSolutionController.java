@@ -8,6 +8,7 @@ import org.optaplanner.core.api.solver.SolutionManager;
 import org.optaplanner.core.api.solver.SolverManager;
 import org.optaplanner.core.api.solver.SolverStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +30,18 @@ public class LessonPlanSolutionController {
         solutionManager.update(lessonPlanSolution);
         lessonPlanSolution.setSolverStatus(solverStatus);
         return lessonPlanSolution;
+    }
+
+    @PostMapping("/solve")
+    public void solve() {
+        solverManager.solveAndListen(1L,
+                lessonPlanSolutionService::findById,
+                lessonPlanSolutionService::save);
+    }
+
+    @PostMapping("/stopSolving")
+    public void stopSolving() {
+        solverManager.terminateEarly(1L);
     }
 
 

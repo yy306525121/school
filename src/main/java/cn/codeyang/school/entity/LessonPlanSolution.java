@@ -24,25 +24,9 @@ public class LessonPlanSolution {
     @ProblemFactCollectionProperty
     private List<TimeSlot> timeSlotList;
 
-    @ValueRangeProvider
-    @ProblemFactCollectionProperty
-    private List<ClassInfo> classInfoList;
-
-    @ValueRangeProvider
-    @ProblemFactCollectionProperty
-    private List<LessonType> lessonTypeList;
-
-    @ValueRangeProvider
-    @ProblemFactCollectionProperty
-    private List<Teacher> teacherList;
-
-    @ValueRangeProvider
-    @ProblemFactCollectionProperty
-    private List<Subject> subjectList;
-
 
     @PlanningEntityCollectionProperty
-    private List<LessonPlan> lessonPlanList;
+    private List<LessonPlanOpta> lessonPlanList;
 
     @PlanningScore
     private HardSoftScore score;

@@ -25,6 +25,4 @@ public class LessonType extends BaseEntity {
     private Integer type;
     private BigDecimal price;
 
-    @OneToMany(mappedBy = "lessonType", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<TimeSlot> timeSlotList;
 }

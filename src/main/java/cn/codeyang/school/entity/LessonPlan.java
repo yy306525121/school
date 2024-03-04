@@ -10,7 +10,6 @@ import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-@PlanningEntity
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true)

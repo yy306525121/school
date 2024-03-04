@@ -7,4 +7,6 @@ import cn.codeyang.school.entity.LessonPlanSolution;
  */
 public interface LessonPlanSolutionService {
     LessonPlanSolution findById(Long id);
+
+    void save(LessonPlanSolution lessonPlanSolution);
 }

@@ -26,13 +26,12 @@ class TimeSlotServiceTest {
     @Test
     @Transactional
     public void testSave() {
-        LessonType lessonType = lessonTypeService.findByType(Constant.TIME_SLOT_TYPE_NORMAL);
 
         TimeSlot timeSlot = new TimeSlot();
         timeSlot.setSortInDay(1);
         timeSlot.setStartTime(LocalTime.now());
         timeSlot.setEndTime(LocalTime.now());
-        timeSlot.setLessonType(lessonType);
+        timeSlot.setType(1);
         timeSlotService.save(timeSlot);
     }
 
